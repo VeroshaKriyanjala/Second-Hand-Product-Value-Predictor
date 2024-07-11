@@ -8,6 +8,14 @@
   z-index: 100;
 }
 
+.sidebar .sidebar_dev ul {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  gap: 10px;
+}
+
 .sidebar ul li {
   width: 100%;
   padding: 0px 10px;
@@ -21,18 +29,21 @@
 
 .sidebar ul li button {
   width: 100%;
+  height: 100%;
   display: flex;
-  margin: 0px 50px;
   flex-direction: row;
   align-items: center;
   gap: 20px;
   border: none;
   background-color: transparent;
   text-decoration: none;
+  padding: 0;
 }
 
 .sidebar ul li .links {
   text-decoration: none;
+  width: 100%;
+  height: 100%;
 }
 
 .sidebar ul li span {
@@ -41,6 +52,7 @@
   line-height: 24px;
   text-align: left;
   text-decoration: none;
+  color: #274c77;
 }
 
 .icon {
@@ -55,7 +67,8 @@
   text-decoration: none;
 }
 
-.sidebar li:hover {
+.sidebar li:hover,
+.sidebar li.active {
   background-color: #274c77;
   border-radius: 0px 20px 20px 0px;
   color: #e7ecef;
@@ -63,6 +76,8 @@
 }
 
 .sidebar li:hover .icon,
-.sidebar li:hover .label_name {
+.sidebar li:hover .label_name,
+.sidebar li.active .icon,
+.sidebar li.active .label_name {
   color: #e7ecef;
 }

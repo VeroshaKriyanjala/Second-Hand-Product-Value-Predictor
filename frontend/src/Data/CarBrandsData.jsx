@@ -2,32 +2,27 @@ import { FiHome } from "react-icons/fi";
 import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
 import { MdOutlineLightbulb } from "react-icons/md";
 
-const SideBarData = [
+const CarBrandsData = [
   {
-    title: "Home",
+    title: "BMW",
     icon: { FiHome },
-    path: "/",
   },
   {
-    title: "Browse Cars",
+    title: "AUDI",
     icon: { HiMiniDevicePhoneMobile },
-    path: "/browsecars",
   },
   {
-    title: "My Listings",
+    title: "Porche",
     icon: { MdOutlineLightbulb },
-    path: "/mylistings",
   },
   {
-    title: "My Account",
+    title: "Toyota",
     icon: { MdOutlineLightbulb },
-    path: "/myaccount",
   },
   {
-    title: "Support",
+    title: "Honda",
     icon: { MdOutlineLightbulb },
-    path: "/support",
   },
 ];
 
-export default SideBarData;
+export default CarBrandsData;
