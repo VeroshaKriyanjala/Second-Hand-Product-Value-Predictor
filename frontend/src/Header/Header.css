@@ -1,0 +1,60 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 10px 0px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0px 6px 12px 0px rgba(39, 76, 119, 0.16);
+  position: fixed;
+  width: 100%;
+}
+
+.company_name {
+  font-size: 14px;
+  color: #333;
+  margin-left: 64px;
+}
+
+.profile_details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 64px;
+}
+
+.profile_details button {
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.profile_details img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.profile_details span {
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.profile_details div {
+  display: flex;
+  align-items: center;
+}
+
+.profile_details div svg {
+  font-size: 20px;
+}
+
+.IoLogOutOutline {
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}

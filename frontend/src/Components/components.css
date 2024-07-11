@@ -1,0 +1,373 @@
+/* Background component */
+.component-background {
+  background: #f8f8fb;
+  border-radius: 20px;
+  box-shadow: 0px 20.21px 40.42px -6.74px #274c7729;
+  padding: 25px 20px;
+}
+
+/* Toggle Button Componenet */
+.button-dev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-button {
+  width: 50px;
+  height: 28px;
+  border-radius: 99px;
+  background: #879cb366;
+  box-shadow: 0px 5.05px 10.11px -3.37px #274c7729;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.toggle-button .thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #ffff;
+  border-radius: 99px;
+  transition: transform 0.2s ease;
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.toggle-button.toggled .thumb {
+  transform: translate(22px, -50%);
+}
+
+.toggle-button.toggled {
+  background: #516f91;
+}
+
+/* Dashboard Component */
+.main-component-dashboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.middle-dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 66%;
+  height: 100%;
+  gap: 20px;
+}
+
+.notifications-dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  height: 100%;
+}
+
+.first-dev-middle,
+.second-dev-middle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+}
+
+.second-dev-middle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+}
+
+.whether-box {
+  display: flex;
+  flex-direction: row;
+  height: 180px;
+  width: 250px;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+.whether-box > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.span-includer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+}
+
+.span-includer > span:nth-child(1) {
+  color: #274c77;
+  font-family: Lato;
+  font-size: 15.16px;
+  font-weight: 800;
+  line-height: 18.19px;
+  text-align: left;
+}
+
+.span-includer > span:nth-child(2) {
+  color: #516f91;
+  font-family: Lato;
+  font-size: 13.47px;
+  font-weight: 600;
+  line-height: 16.17px;
+  text-align: left;
+}
+
+.span-includer > span:nth-child(3) {
+  color: #516f91;
+  font-family: Lato;
+  font-size: 20.21px;
+  font-weight: 700;
+  line-height: 24.25px;
+  text-align: left;
+}
+
+.span-includer > div:nth-child(4) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.span-includer > div:nth-child(4) > span:nth-child(1) {
+  color: #00b2ff;
+  font-family: Lato;
+  font-size: 11.79px;
+  font-weight: 600;
+  line-height: 14.15px;
+  text-align: left;
+}
+
+.span-includer > div:nth-child(4) > span:nth-child(2) {
+  color: #879cb3;
+  font-family: Lato;
+  font-size: 11.79px;
+  font-weight: 600;
+  line-height: 14.15px;
+  text-align: left;
+}
+
+.span-includer > div:nth-child(4) > span:nth-child(3) {
+  color: #ff7a00;
+  font-family: Lato;
+  font-size: 11.79px;
+  font-weight: 600;
+  line-height: 14.15px;
+  text-align: left;
+}
+
+.span-includer > span:nth-child(5) {
+  color: #879cb3;
+  font-family: Lato;
+  font-size: 11.79px;
+  font-weight: 600;
+  line-height: 14.15px;
+  text-align: left;
+}
+
+/* Dashboard Componenets -> Tempetarure Box */
+
+.temperature-box {
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+  width: 250px;
+  box-sizing: border-box;
+}
+
+.temperature-box > span:nth-child(1) {
+  color: #274c77;
+  font-family: Lato;
+  font-size: 15.16px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.pic_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pic_box > span {
+  color: #879cb3;
+  font-family: Lato;
+  font-size: 13.47px;
+  font-weight: 600;
+  text-align: right;
+  width: 100px;
+}
+
+.pic_box > .button_dev {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: center;
+  /* gap: 10px; */
+}
+
+.temperature-box .pic_box > span {
+  color: #516f91;
+  font-family: Lato;
+  font-size: 33.68px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.temp-text-button {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.temp-text-button > span {
+  color: #879cb3;
+  font-family: Lato;
+  font-size: 11.79px;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Dashboard Componenets -> Electricity Box */
+.electricity-box {
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+  width: 250px;
+  box-sizing: border-box;
+}
+
+/* Dashboard Componenets -> wifi-box*/
+.wifi-box {
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+  width: 250px;
+  box-sizing: border-box;
+  padding: 10px;
+  gap: 10px;
+}
+
+.wifi-box > span:nth-child(1) {
+  margin: 10px 10px 0px 10px;
+  color: #274c77;
+  font-family: Lato;
+  font-size: 15.16px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.wifi-box > span:nth-child(2) {
+  color: #516f91;
+  font-family: Lato;
+  font-size: 15.16px;
+  font-weight: 700;
+  /* line-height: 18.19px; */
+  text-align: left;
+  margin-left: 10px;
+}
+
+.conn_device > span:nth-child(1) {
+  color: #516f91;
+  font-family: Lato;
+  font-size: 15.16px;
+  font-weight: 800;
+  line-height: 18.19px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.conn_device > span:nth-child(2) {
+  color: #879cb3;
+  font-family: Lato;
+  font-size: 15.16px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.data_quata_sent > span:nth-child(1) {
+  color: #516f91;
+  font-family: Lato;
+  font-size: 13.47px;
+  font-weight: 800;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.data_quata_sent > span:nth-child(2) {
+  color: #879cb3;
+  font-family: Lato;
+  font-size: 13.47px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.data_quata_sent > span:nth-child(3) {
+  color: #9b4343;
+  font-family: Lato;
+  font-size: 13.47px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.data_quata_received > span:nth-child(1) {
+  color: #516f91;
+  font-family: Lato;
+  font-size: 13.47px;
+  font-weight: 800;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.data_quata_received > span:nth-child(2) {
+  color: #879cb3;
+  font-family: Lato;
+  font-size: 13.47px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.data_quata_received > span:nth-child(3) {
+  color: #439b57;
+  font-family: Lato;
+  font-size: 13.47px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.data-usage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 10px; */
+}
