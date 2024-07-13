@@ -1,9 +1,9 @@
 import React from "react";
-import "./BrowseCar.css";
-import Background from "../Components/Background";
-import Advertisement from "../Components/Advertisement";
-import AdvertisementData from "../Data/AdvertisementData";
-import image from "../assets/car.png";
+import "./BrowseCars.css";
+import Background from "../../Components/Background";
+import Advertisement from "../../Components/Advertisement";
+import AdvertisementData from "../../Data/AdvertisementData";
+import image from "../../assets/car.png";
 
 function BrowseCars() {
   return (
@@ -31,15 +31,19 @@ function BrowseCars() {
               mileage={ad.mileage}
               fuel={ad.fuel}
               image={image}
+              sellerDetails={ad.sellerDetails}
+              browseCars={true}
             />
           ))}
         </div>
       </Background>
-      <Background className="filter">
-        <div className="flex flex-row justify-start w-full p-1 h-dvh">
-          <span className="topic">Filters</span>
-        </div>
-      </Background>
+      <div className="filter-contactseller">
+        <Background className="filter">
+          <div className="">
+            <span className="topic">Filters</span>
+          </div>
+        </Background>
+      </div>
     </div>
   );
 }

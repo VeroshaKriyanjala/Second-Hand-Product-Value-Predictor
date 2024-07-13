@@ -3,10 +3,10 @@ import "./App.css";
 
 import SideBar from "./SideBar/sidebar";
 import Header from "./Header/Header";
-import Home from "./Pages/Home";
-import BrowseCars from "./Pages/BrowseCars";
-import MyListings from "./Pages/MyListings";
-import MyAccount from "./Pages/MyAccount";
+import Home from "./Pages/Home/Home";
+import BrowseCars from "./Pages/BrowseCars/BrowseCars";
+import MyListings from "./Pages/MyListings/MyListings";
+import MyAccount from "./Pages/MyAccount/MyAccount";
 import Support from "./Pages/Support";
 
 function App() {

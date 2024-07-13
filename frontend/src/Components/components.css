@@ -128,3 +128,13 @@
 }
 
 /* Contact Seller */
+.contact-seller-popup {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  height: auto;
+  gap: 20px;
+}

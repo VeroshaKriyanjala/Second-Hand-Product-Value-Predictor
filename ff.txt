@@ -1,0 +1,12 @@
+brand
+model
+user
+type
+paint_color
+condition
+type
+state
+
+product
+
+transmission

@@ -18,12 +18,16 @@
   gap: 10px;
 }
 
+.filter-contactseller {
+  width: 33%;
+}
+
 .filter {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  width: 33%;
+  width: 100%;
   height: 100%;
 }
 

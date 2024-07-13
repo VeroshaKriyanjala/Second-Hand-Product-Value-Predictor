@@ -1,7 +1,7 @@
-import "../Components/components.css";
+import "../../Components/components.css";
 import "./Home.css";
-import Background from "../Components/Background";
-import CarBrandsData from "../Data/CarBrandsData";
+import Background from "../../Components/Background";
+import CarBrandsData from "../../Data/CarBrandsData";
 
 function Home() {
   return (
