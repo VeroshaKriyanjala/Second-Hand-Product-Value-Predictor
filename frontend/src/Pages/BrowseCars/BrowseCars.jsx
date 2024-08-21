@@ -19,7 +19,7 @@ function BrowseCars() {
 
     fetchData()
 
-  })
+  },[])
 
   return (
     

@@ -18,7 +18,7 @@ function MyListings() {
 
     fetchData()
 
-  })
+  },[])
 
 
   return (
