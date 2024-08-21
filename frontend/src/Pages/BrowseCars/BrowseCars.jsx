@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./BrowseCars.css";
 import Background from "../../Components/Background";
 import Advertisement from "../../Components/Advertisement";
-import AdvertisementData from "../../Data/AdvertisementData";
 import image from "../../assets/car.png";
+import axios from 'axios';
 
 function BrowseCars() {
+
+  let [listOfCar,setlistOfCar] = useState([])
+  
+
+  useEffect(() => {
+
+    let fetchData = async() => {
+      let {data:listOfCar} = await axios.get(`http://127.0.0.1:8000/vehicles`)
+      setlistOfCar(listOfCar)
+    }
+
+    fetchData()
+
+  })
+
   return (
+    
     <div className="browsecar">
       <Background className="car-gallery">
         <div className="flex flex-row justify-start w-full p-1">
@@ -20,14 +36,14 @@ function BrowseCars() {
           />
         </div>
         <div className="grid-container">
-          {AdvertisementData.map((ad) => (
+          {listOfCar.map((ad,index) => (
             <Advertisement
-              key={ad.id}
+              key={index}
               brand={ad.brand}
               model={ad.model}
               year={ad.year}
               price={ad.price}
-              location={ad.location}
+              location={ad.state}
               mileage={ad.mileage}
               fuel={ad.fuel}
               image={image}
