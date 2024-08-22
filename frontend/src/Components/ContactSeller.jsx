@@ -2,13 +2,15 @@ import React from "react";
 import Background from "./Background";
 import "./components.css";
 
-function ContactSeller({ sellerDetails }) {
+function ContactSeller({ onContactSeller }) {
+  console.log(onContactSeller);
   return (
-    <Background className="contact-seller-popup">
-      <div className="flex flex-row justify-between w-full p-1">
-        <span className="topic">Seller Details</span>
+    <Background className="contact-seller">
+      <div className="">
+        <span className="">{onContactSeller.name}</span>
+        <span className="">{onContactSeller.contact}</span>
+        <span className="">{onContactSeller.email}</span>
       </div>
-      <div className="seller-details">{console.log(sellerDetails)}</div>
     </Background>
   );
 }

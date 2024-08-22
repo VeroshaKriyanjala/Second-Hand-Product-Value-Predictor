@@ -4,8 +4,14 @@ import Background from "../../Components/Background";
 import Advertisement from "../../Components/Advertisement";
 import AdvertisementData from "../../Data/AdvertisementData";
 import image from "../../assets/car.png";
+import ContactSeller from "../../Components/ContactSeller";
 
 function BrowseCars() {
+  const [data, setData] = React.useState();
+  const fetchSeller = (sellerDetails) => {
+    setData(sellerDetails);
+  };
+
   return (
     <div className="browsecar">
       <Background className="car-gallery">
@@ -31,7 +37,7 @@ function BrowseCars() {
               mileage={ad.mileage}
               fuel={ad.fuel}
               image={image}
-              sellerDetails={ad.sellerDetails}
+              onSellerDetails={() => fetchSeller(ad.sellerDetails)}
               browseCars={true}
             />
           ))}
@@ -40,7 +46,12 @@ function BrowseCars() {
       <div className="filter-contactseller">
         <Background className="filter">
           <div className="">
-            <span className="topic">Filters</span>
+            {data && (
+              <div>
+                <ContactSeller onContactSeller={data} />
+              </div>
+            )}
+            {!data && <div>No Seller Details</div>}
           </div>
         </Background>
       </div>
