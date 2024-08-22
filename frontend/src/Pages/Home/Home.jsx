@@ -103,7 +103,6 @@ function Home() {
             })}
           </div>
         </Background>
-        <Background>jgjg</Background>
       </div>
     </div>
   );
