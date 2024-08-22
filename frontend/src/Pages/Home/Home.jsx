@@ -58,6 +58,7 @@ function Home() {
           </div>
           <div className="flex flex-col w-6/12 p-1 mr-8"></div>
         </div>
+
         <div className="flex flex-row w-full justify-center h-[200px]">
           <div className="w-9/12 h-[200px] flex flex-col justify-end items-center p-1 gap-10">
             <div className="flex flex-row justify-evenly w-full h-6">

@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./MyListings.css";
 import Background from "../../Components/Background";
 import Advertisement from "../../Components/Advertisement";
+import AdvertisementData from "../../Data/AdvertisementData";
 import image from "../../assets/car.png";
-import axios from "axios";
 
 function MyListings() {
 
@@ -37,14 +37,14 @@ function MyListings() {
           />
         </div>
         <div className="grid-container">
-          {listOfCars.map((ad,index) => (
+          {AdvertisementData.map((ad) => (
             <Advertisement
-              key={index}
+              key={ad.id}
               brand={ad.brand}
               model={ad.model}
               year={ad.year}
               price={ad.price}
-              location={ad.state}
+              location={ad.location}
               mileage={ad.mileage}
               fuel={ad.fuel}
               image={image}
