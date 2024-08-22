@@ -1,6 +1,7 @@
 import React from "react";
 import "./components.css";
 import Background from "./Background";
+// import { useState } from "react";
 
 export default function Advertisement({
   brand,
@@ -11,9 +12,14 @@ export default function Advertisement({
   mileage,
   fuel,
   image,
-  sellerDetails,
+  onSellerDetails,
   browseCars,
 }) {
+  // const [clickContactSeller, setClickContactSeller] = useState(false);
+  // const handleContactSellerClick = () => {
+  // setClickContactSeller(true);
+  // };
+
   return (
     <Background className="advertisement">
       <img src={image} alt="Car" />
@@ -24,7 +30,9 @@ export default function Advertisement({
       </div>
       {browseCars ? (
         <div className="w-full px-4 py-2">
-          <button className="cont-seller-but">Contact Seller</button>
+          <button className="cont-seller-but" onClick={onSellerDetails}>
+            Contact Seller
+          </button>
         </div>
       ) : (
         <div className="w-full px-4 py-2">
@@ -34,7 +42,3 @@ export default function Advertisement({
     </Background>
   );
 }
-
-// export function onContactSellerClick(sellerDetails) {
-//   console.log(sellerDetails);
-// }
