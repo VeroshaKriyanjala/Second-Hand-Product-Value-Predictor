@@ -1,9 +1,10 @@
 /* Background component */
 .component-background {
-  background: #f8f8fb;
-  border-radius: 20px;
-  box-shadow: 0px 20.21px 40.42px -6.74px #274c7729;
-  padding: 25px 20px;
+  /* background: white; */
+  border-color: #516f91;
+  /* border-radius: 20px; */
+  /* box-shadow: 0px 20.21px 40.42px -6.74px #274c7729; */
+  /* padding: 25px 20px; */
 }
 
 /* Toggle Button Componenet */

@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from config.config import database
 from models.models import User,Vehicles
 from fastapi.middleware.cors import CORSMiddleware 

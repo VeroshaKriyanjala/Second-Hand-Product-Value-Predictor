@@ -1,7 +1,6 @@
 import React from "react";
 import "./components.css";
 import Background from "./Background";
-// import { useState } from "react";
 
 export default function Advertisement({
   brand,
@@ -15,13 +14,8 @@ export default function Advertisement({
   onSellerDetails,
   browseCars,
 }) {
-  // const [clickContactSeller, setClickContactSeller] = useState(false);
-  // const handleContactSellerClick = () => {
-  // setClickContactSeller(true);
-  // };
-
   return (
-    <Background className="advertisement">
+    <Background className="advertisement bg-gray-200">
       <img src={image} alt="Car" />
       <div className="details">
         <div className="car-name">{`${year} ${brand} ${model}`}</div>

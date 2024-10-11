@@ -1,32 +1,28 @@
-import { FiHome } from "react-icons/fi";
-import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
-import { MdOutlineLightbulb } from "react-icons/md";
-
 const SideBarData = [
   {
-    title: "Home",
-    icon: { FiHome },
-    path: "/",
+    title: "Predict",
+    path: "/dashboard/predict",
+    protected: false,
   },
   {
     title: "Browse Cars",
-    icon: { HiMiniDevicePhoneMobile },
-    path: "/browsecars",
+    path: "/dashboard/browsecars",
+    protected: false,
   },
   {
     title: "My Listings",
-    icon: { MdOutlineLightbulb },
-    path: "/mylistings",
+    path: "/dashboard/mylistings",
+    protected: true,
   },
   {
     title: "My Account",
-    icon: { MdOutlineLightbulb },
-    path: "/myaccount",
+    path: "/dashboard/myaccount",
+    protected: true,
   },
   {
-    title: "Support",
-    icon: { MdOutlineLightbulb },
-    path: "/support",
+    title: "About Us",
+    path: "/dashboard/aboutus",
+    protected: false,
   },
 ];
 

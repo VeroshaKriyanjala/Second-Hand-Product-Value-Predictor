@@ -1,59 +1,120 @@
-import React, { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import React from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
-import SideBar from "./SideBar/sidebar";
-import Header from "./Header/Header";
-import Home from "./Pages/Home/Home";
-import BrowseCars from "./Pages/BrowseCars/BrowseCars";
-import MyListings from "./Pages/MyListings/MyListings";
-import MyAccount from "./Pages/MyAccount/MyAccount";
-import Support from "./Pages/Support";
-import Login from "./Pages/Auth/login";
-import SignUp from "./Pages/Auth/signup";
-import FirstSignIn from "./Pages/firstsigninpage";
+import Header from "./Components/Header";
+import Predict from "./Pages/Predict";
+import BrowseCars from "./Pages/BrowseCars";
+import MyListings from "./Pages/MyListings";
+import MyAccount from "./Pages/MyAccount";
+import AboutUs from "./Pages/AboutUs";
+import NewCar from "./Components/NewCar";
+import Inventory from "./Components/Inventory";
+import DashBoard from "./Pages/DashBoard";
+import Footer from "./Components/Footer";
+import Promotion from "./Components/Promotion";
+import Services from "./Components/Services";
+import Brands from "./Components/Brands";
+import { useGlobalContext } from "./context/GlobalContextProvider";
+import ProtectedRoute from "./context/ProtectedRoute";
+import Login from "./Pages/Login";
+import SignUp from "./Pages/SignUp";
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const { isLogged, setIsLogged } = useGlobalContext();
+  const location = useLocation();
 
   const handleLogin = () => {
-    setIsAuthenticated(true);
+    setIsLogged(true);
   };
 
   const handleLogout = () => {
-    setIsAuthenticated(false);
+    setIsLogged(false);
   };
 
   return (
     <>
-      <Header onAuthentication={isAuthenticated} onLogout={handleLogout} />
-      <div className="layout">
-        <div className="sidebar-dev">
-          <SideBar />
-        </div>
+      <Header onAuthentication={isLogged} onLogout={handleLogout} />
+      <main className="">
+        {location.pathname === "/" && (
+          <>
+            <Inventory />
+            <Brands />
+            <Services />
+            <Promotion />
+            <Footer />
+          </>
+        )}
+        <Routes>
+          <Route path="/login" element={<Login onLogin={handleLogin} />} />
+          <Route path="/signup" element={<SignUp onSignUp={handleLogin} />} />
+          <Route
+            path="/dashboard"
+            element={
+              <DashBoard onAuthentication={isLogged} onLogin={handleLogin} />
+            }
+          >
+            <Route path="predict" element={<Predict />} />
+            <Route path="browsecars" element={<BrowseCars />} />
+            <Route
+              path="mylistings"
+              element={
+                <ProtectedRoute>
+                  <MyListings />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="mylistings/newcar"
+              element={
+                <ProtectedRoute>
+                  <NewCar />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="myaccount"
+              element={
+                <ProtectedRoute>
+                  <MyAccount />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route path="aboutus" element={<AboutUs />} />
+          </Route>
+        </Routes>
+      </main>
+    </>
+  );
+}
+
+export default App;
+
+/* <div className="layout">
+        {!hideSidebar && (
+          <div className="sidebar-dev">
+            <SideBar />
+          </div>
+        )}
         <div
           className={`main-content ${isAuthenticated ? "with-sidebar" : ""}`}
         >
           <Routes>
             <Route path="/login" element={<Login onLogin={handleLogin} />} />
             <Route path="/signup" element={<SignUp onSignUp={handleLogin} />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/support" element={<Support />} />
+            <Route path="/" element={<Predict />} />
+            <Route path="/browsecars" element={<BrowseCars />} />
+            <Route path="/aboutus" element={<AboutUs />} />
             {isAuthenticated ? (
               <>
-                <Route path="/browsecars" element={<BrowseCars />} />
-                <Route path="/mylistings" element={<MyListings />} />
+                <Route path="/mylistings" element={<MyListings />}>
+                  <Route path="/mylistings/newcar" element={<NewCar />} />
+                </Route>
                 <Route path="/myaccount" element={<MyAccount />} />
               </>
             ) : (
-              // <p>You need to sign in first</p>
               <Route path="*" element={<FirstSignIn />} />
-              // <Route path="*" element={<Login onLogin={handleLogin} />} />
             )}
           </Routes>
         </div>
-      </div>
-    </>
-  );
-}
-
-export default App;
+      </div> */

@@ -10,7 +10,7 @@ const AdvertisementData = [
     location: "Lahore",
     mileage: "19,421",
     fuel: "Petrol",
-    // image: { image },
+    image: { image },
     sellerDetails: {
       name: "Ali",
       contact: "03001234567",
