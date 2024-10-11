@@ -16,7 +16,8 @@ export default function Advertisement({
 }) {
   return (
     <Background className="advertisement bg-gray-200">
-      <img src={image} alt="Car" />
+      <img src={image} alt={`${brand} ${model}`} />
+
       <div className="details">
         <div className="car-name">{`${year} ${brand} ${model}`}</div>
         <p className="car-features">{`${mileage} | ${fuel} | ${location}`}</p>
